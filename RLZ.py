@@ -39,6 +39,3 @@ def addToRefDict(T, S, factors, th_length):
     print(S)
     return S
 
-
-
-# 

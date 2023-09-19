@@ -5,12 +5,13 @@ def getData(dictFile):
         S = f1.read()
         print(S)
         print(type(S))
-        print("\n\n")
+        print("\n")
+        # print("\n\n")
 
         hex_string =  S.hex()
-        print(hex_string)
-        print(type(hex_string))
-        print("\n\n")
+        # print(hex_string)
+        # print(type(hex_string))
+        # print("\n\n")
 
 
 
@@ -26,8 +27,8 @@ def getData(dictFile):
         result_hex_string = ''.join(modified_hex_pairs)
 
         # Print the result
-        print(result_hex_string)
-        print('\n\n')
+        # print(result_hex_string)
+        # print('\n\n')
 
 
 
@@ -39,12 +40,16 @@ def getData(dictFile):
         if index != -1:
             # Extract the data after "2020202420202028202020"
             data_after_substring = result_hex_string[index + len("2020202420202028202020"):]
-
+            metaData = result_hex_string[:index]
+            print("\nmeta data")
+            print(metaData)
             # Print the extracted data
-            print(data_after_substring)
-            print("\n")
+            # print("data_after_substring")
+            # print(data_after_substring)
+            # print("\n")
         else:
             print("Data not found in the input string.")
 
+    return data_after_substring, metaData
 
 
